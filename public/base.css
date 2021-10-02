@@ -6,7 +6,7 @@ body {
     color: #fff;
     font-family: 'Noto Sans', sans-serif;
 }
-
+/*- .card not required, solo esta aqui para que las cosas luscan bien */
 .card {
     display: flex;
     flex-direction: column;
