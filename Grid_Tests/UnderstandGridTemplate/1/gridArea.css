@@ -1,0 +1,90 @@
+
+#page {
+  display: grid;
+  grid-template-areas: "head head head"
+                       "nav  main ."
+                       "nav  foot foot";
+    /* esta tomando estas configuraciones*/
+  grid-template-rows: 10vmin 80vh 10vw;
+  grid-template-columns: 10vw 5fr 20vw;
+}
+
+#page > .a{
+  grid-area: head;
+  background-color: #8ca0ff;
+}
+
+#page > .b{
+  grid-area: nav;
+  background-color: #ffa08c;
+}
+
+#page > .c {
+  grid-area: main;
+  background-color: #ffff64;
+}
+#page> .media{
+    border: 10px solid #f76707;
+    border-radius: 5px;
+}
+#page > .media{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img content";
+    color: hsla(0, 8%, 85%, 0.932);
+    background-color: black;
+    
+}
+#page .media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+#page > footer {
+  grid-area: foot;
+  background-color: #8cffa0;
+}
+/*este codigo no se esta usando
+@media only screen and (max-width: 600px){
+    * {box-sizing: border-box;}
+
+.media {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    max-width: 400px;
+}
+.media {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img content";
+    margin-bottom: 1em;
+}
+
+.media.flipped {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content img";
+}
+
+.media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
+
+}
+
