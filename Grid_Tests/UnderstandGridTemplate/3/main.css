@@ -20,7 +20,7 @@ main > * {
     align-items: center;
 }
 
-/* Responsive */
+/* Responsive  if the screen size is more than 500px do this*/ 
 @media (min-width: 500px) {
     main {
         grid-template-areas:
