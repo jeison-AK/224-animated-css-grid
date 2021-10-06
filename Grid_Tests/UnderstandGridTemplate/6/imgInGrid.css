@@ -14,7 +14,8 @@
 	display: grid;
 	grid-gap: 0.5em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /*!important si borro el ultimo 1fr se ajustara 
+    /*! automaticamente al tamaño del elemento adentro*/
     grid-template-areas: 
 
     "primeraCaja primeraCaja"
@@ -82,15 +83,15 @@
 .caja1 {
 	background-color: dimgrey;
 	grid-area: primeraCaja;
-
-
+    justify-self: auto;/*!important probar con justify-self:center
+            /*! porq será que queda una parte gris? Respuesta: porque las letras CAJA1 también son parte del contenido*/
 }
 .caja2 {
 	background-color: dimgrey;
 	grid-area: segundaCaja;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content;
+    grid-template-rows: min-content;/*!important*/
     grid-template-areas: "a b";
 }
 .caja3 {
@@ -101,12 +102,12 @@
 .caja2 img{/*con la class no funciono*/
     grid-area: a;
     align-self: center; /*!important*/
-    justify-content: space-around; /*!important*/
 }
 img{/*!important*/
     max-width: 100%; 
     height: auto;
 }
-/*display: grid;
+/*para crear un grid dentro de otro veras algo así:
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "a b";*/
