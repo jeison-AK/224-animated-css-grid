@@ -88,12 +88,25 @@
 .caja2 {
 	background-color: dimgrey;
 	grid-area: segundaCaja;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: "a b";
 }
 .caja3 {
 	background-color: dimgrey;
 	grid-area: terceraCaja;
 }
 
+.caja2 img{/*con la class no funciono*/
+    grid-area: a;
+    align-self: center; /*!important*/
+    justify-content: space-around; /*!important*/
+}
+img{/*!important*/
+    max-width: 100%; 
+    height: auto;
+}
 /*display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "a b";*/
